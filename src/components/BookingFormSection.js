@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const BookingForm = () => {
+const BookingFormSection = () => {
   const [name, setName] = useState("");
   const [university, setUniversity] = useState("");
   const handleSubmit = async (e) => {
@@ -20,4 +20,4 @@ const BookingForm = () => {
   );
 };
 
-export default BookingForm;
+export default BookingFormSection;
