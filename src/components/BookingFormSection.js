@@ -1,23 +1,46 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
-const BookingFormSection = () => {
-  const [name, setName] = useState("");
-  const [university, setUniversity] = useState("");
-  const handleSubmit = async (e) => {
+const BookingForm = () => {
+  const [name, setName] = useState('');
+  const [university, setUniversity] = useState('');
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    await axios.post("/api/bookings", { name, university });
-    alert("Booking submitted!");
+    console.log('Booking submitted:', { name, university });
+    alert(`Call booked for ${name} at ${university}`);
+    setName('');
+    setUniversity('');
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-10 bg-white shadow-md max-w-md mx-auto mt-8">
-      <h3 className="text-xl font-bold mb-4">Book a Call</h3>
-      <input className="border p-2 w-full mb-2" placeholder="Your Name" onChange={e => setName(e.target.value)} />
-      <input className="border p-2 w-full mb-2" placeholder="University" onChange={e => setUniversity(e.target.value)} />
-      <button className="bg-blue-500 text-white px-4 py-2 mt-2" type="submit">Submit</button>
-    </form>
+    <div className="bg-white shadow-md rounded-md p-6 mb-8">
+      <h2 className="text-xl font-semibold mb-4">Book a Call</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="w-full border border-gray-300 p-3 rounded"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+        <input
+          type="text"
+          placeholder="University"
+          className="w-full border border-gray-300 p-3 rounded"
+          value={university}
+          onChange={(e) => setUniversity(e.target.value)}
+          required
+        />
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
   );
 };
 
-export default BookingFormSection;
+export default BookingForm;
