@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InstagramEmbed = () => (
+const InstagramEmbedSection = () => (
   <section className="my-6">
     <h2 className="text-xl font-semibold mb-4">Campus Feeds</h2>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -13,4 +13,4 @@ const InstagramEmbed = () => (
   </section>
 );
 
-export default InstagramEmbed;
+export default InstagramEmbedSection;
