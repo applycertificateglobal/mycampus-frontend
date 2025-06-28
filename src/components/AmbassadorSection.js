@@ -40,4 +40,4 @@ const AmbassadorSection = () => {
   );
 };
 
-export default Ambass
+export default AmbassadorSection
