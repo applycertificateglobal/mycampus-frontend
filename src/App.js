@@ -1,22 +1,23 @@
 import React from 'react';
-import Hero from './components/Hero';
-import BookingForm from './components/BookingForm';
+
+import HeroSection from './components/HeroSection';
+import BookingFormSection from './components/BookingFormSection';
 import AmbassadorSection from './components/AmbassadorSection';
-import FallbackCTA from './components/FallbackCTA';
-import InstagramEmbed from './components/InstagramEmbed';
-import Footer from './components/Footer';
+import FallbackCTASection from './components/FallbackCTASection';
+import InstagramEmbedSection from './components/InstagramEmbedSection';
+import FooterSection from './components/FooterSection';
 
 function App() {
   return (
     <div className="font-sans text-gray-800">
-      <Hero />
+      <HeroSection />
       <div className="max-w-6xl mx-auto px-4">
-        <BookingForm />
+        <BookingFormSection />
         <AmbassadorSection />
-        <FallbackCTA />
-        <InstagramEmbed />
+        <FallbackCTASection />
+        <InstagramEmbedSection />
       </div>
-      <Footer />
+      <FooterSection />
     </div>
   );
 }
