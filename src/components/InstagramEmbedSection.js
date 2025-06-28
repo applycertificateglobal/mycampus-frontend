@@ -1,16 +1,23 @@
 import React from 'react';
 
-const InstagramEmbedSection = () => (
-  <section className="my-6">
-    <h2 className="text-xl font-semibold mb-4">Campus Feeds</h2>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-      {/* These are example Instagram embeds or media placeholders */}
-      <div className="bg-gray-200 h-32">IG Post 1</div>
-      <div className="bg-gray-200 h-32">IG Post 2</div>
-      <div className="bg-gray-200 h-32">IG Post 3</div>
-      <div className="bg-gray-200 h-32">IG Post 4</div>
+const InstagramEmbed = () => {
+  return (
+    <div className="my-10 px-4">
+      <h2 className="text-2xl font-bold mb-4 text-center">CampusVibe on Instagram</h2>
+      <div className="flex justify-center">
+        <iframe
+          title="Instagram Feed"
+          src="https://widgets.sociablekit.com/instagram-feed/iframe/26194387"
+          width="100%"
+          height="600"
+          style={{ border: 'none', overflow: 'hidden' }}
+          scrolling="no"
+          allowtransparency="true"
+          allow="encrypted-media"
+        ></iframe>
+      </div>
     </div>
-  </section>
-);
+  );
+};
 
-export default InstagramEmbedSection;
+export default InstagramEmbed;
