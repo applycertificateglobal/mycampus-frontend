@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import HeroSection from './components/HeroSection';
 import BookingFormSection from './components/BookingFormSection';
@@ -7,19 +8,10 @@ import FallbackCTASection from './components/FallbackCTASection';
 import InstagramEmbedSection from './components/InstagramEmbedSection';
 import FooterSection from './components/FooterSection';
 
-function App() {
-  return (
-    <div className="font-sans text-gray-800">
-      <HeroSection />
-      <div className="max-w-6xl mx-auto px-4">
-        <BookingFormSection />
-        <AmbassadorSection />
-        <FallbackCTASection />
-        <InstagramEmbedSection />
-      </div>
-      <FooterSection />
-    </div>
-  );
-}
+import UniversityDetail from './pages/UniversityDetail'; // Dynamic page
 
-export default App;
+// Homepage component wrapped for reuse
+const Home = () => (
+  <div className="font-sans text-gray-800">
+    <HeroSection />
+    <div className="max-w-6xl
