@@ -8,10 +8,30 @@ import FallbackCTASection from './components/FallbackCTASection';
 import InstagramEmbedSection from './components/InstagramEmbedSection';
 import FooterSection from './components/FooterSection';
 
-import UniversityDetail from './pages/UniversityDetail'; // Dynamic page
+import UniversityDetail from './pages/UniversityDetail';
 
-// Homepage component wrapped for reuse
 const Home = () => (
   <div className="font-sans text-gray-800">
     <HeroSection />
-    <div className="max-w-6xl
+    <div className="max-w-6xl mx-auto px-4">
+      <BookingFormSection />
+      <AmbassadorSection />
+      <FallbackCTASection />
+      <InstagramEmbedSection />
+    </div>
+    <FooterSection />
+  </div>
+);
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/university/:id" element={<UniversityDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
