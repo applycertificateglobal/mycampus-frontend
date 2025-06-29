@@ -8,8 +8,6 @@ import FallbackCTASection from './components/FallbackCTASection';
 import InstagramEmbedSection from './components/InstagramEmbedSection';
 import FooterSection from './components/FooterSection';
 
-import UniversityDetail from './pages/UniversityDetail';
-
 const Home = () => (
   <div className="font-sans text-gray-800">
     <HeroSection />
